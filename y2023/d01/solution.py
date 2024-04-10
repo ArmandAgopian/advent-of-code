@@ -50,6 +50,5 @@ def part02(lines):
         
     return value
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

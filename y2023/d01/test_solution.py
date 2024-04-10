@@ -1,4 +1,4 @@
-import solution
+from y2023.d01 import solution
 
 
 def test_part01():

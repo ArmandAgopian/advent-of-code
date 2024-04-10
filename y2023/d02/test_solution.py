@@ -1,4 +1,4 @@
-import solution
+from y2023.d02 import solution
 
 
 def test_part01():
@@ -9,5 +9,3 @@ def test_part01():
             "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"]
 
     assert solution.part01(example) == 8
-
-def test_part02():

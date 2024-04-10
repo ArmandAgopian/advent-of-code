@@ -12,6 +12,9 @@ def main():
     print(f"Part 02: {part02(lines)}")
 
 def part01(lines):
-
+    return None
 def part02(lines):
-    
+    return None
+
+if __name__ == '__main__':
+    main()
