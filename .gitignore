@@ -4,6 +4,7 @@ input.txt
 __pycache__/
 *.py[cod]
 *$py.class
+cov.xml
 
 # C extensions
 *.so
