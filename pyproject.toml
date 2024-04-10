@@ -1,0 +1,2 @@
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report xml:cov.xml --cov-report term --import-mode=importlib"
