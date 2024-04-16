@@ -1,12 +1,21 @@
-from y2023.d03 import solution
+from .solution import *
 
 
 def test_part01():
-    example = []
+    example = ["467..114..",
+               "...*......",
+               "..35..633.",
+               "......#...",
+               "617*......",
+               ".....+.58.",
+               "..592.....",
+               "......755.",
+               "...$.*....",
+               ".664.598.."]
 
-    assert solution.part01(example) == 8
+    assert part01(example) == 4361
 
 def test_part02():
     example = []
 
-    assert solution.part02(example) == 2286
+    assert part02(example) == 2286

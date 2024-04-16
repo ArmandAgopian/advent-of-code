@@ -1,10 +1,10 @@
-from y2023.d01 import solution
+from .solution import *
 
 
 def test_part01():
     example = ["1abc2", "pqr3stu8vwx", "a1b2c3d4e5f", "treb7uchet"]
 
-    assert solution.part01(example) == 142
+    assert part01(example) == 142
 
 
 def test_part02():
@@ -18,4 +18,4 @@ def test_part02():
         "7pqrstsixteen"
     ]
 
-    assert solution.part02(example) == 281
+    assert part02(example) == 281
