@@ -25,7 +25,7 @@ LETTER_DICT = {
 
 
 def main():
-    with open("input.txt") as f:
+    with open("./input.txt") as f:
         lines = f.read().splitlines()
 
     print(f"Part 01: {part01(lines)}")
