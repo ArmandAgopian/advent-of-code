@@ -15,6 +15,7 @@ def test_part01():
 
     assert part01(example) == 4361
 
+
 def test_part02():
     example = []
 

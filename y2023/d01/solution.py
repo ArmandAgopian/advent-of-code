@@ -47,8 +47,9 @@ def part02(lines):
     for line in lines:
         matches = re.findall(r"\d|zero|one|two|three|four|five|six|seven|eight|nine", line, overlapped=True)
         value += ((LETTER_DICT[matches[0]] * 10) + LETTER_DICT[matches[-1]])
-        
+
     return value
+
 
 if __name__ == '__main__':
     main()

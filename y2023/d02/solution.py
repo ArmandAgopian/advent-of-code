@@ -6,12 +6,14 @@ MAX_VAL = {
     'blue': 14
 }
 
+
 def main():
     with open("./input.txt") as f:
         lines = f.read().splitlines()
 
     print(f"Part 01: {part01(lines)}")
     print(f"Part 02: {part02(lines)}")
+
 
 def part01(lines):
     value = 0
@@ -25,12 +27,13 @@ def part01(lines):
             for pair in set.split(','):
                 number, color = pair.split()
                 if int(number) > MAX_VAL.get(color):
-                    limit = True  
+                    limit = True
 
         if not limit:
             value += count
 
     return value
+
 
 def part02(lines):
     value = 0
@@ -38,7 +41,7 @@ def part02(lines):
         maxes = {
             "red": 0,
             "blue": 0,
-            "green":0
+            "green": 0
         }
 
         # Each game set
@@ -50,8 +53,9 @@ def part02(lines):
                 maxes.update({color: max(maxes.get(color), int(number))})
 
         value += (maxes.get('red') * maxes.get('blue') * maxes.get('green'))
-        
+
     return value
+
 
 if __name__ == '__main__':
     main()
