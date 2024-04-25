@@ -18,10 +18,8 @@ def part02(lines):
 
 
 if __name__ == '__main__':
-    lines = []
     with open("./input.txt") as f:
-        for line in f.read().splitlines():
-            lines.append([*line])
+        lines = f.read().splitlines()
 
     print(f"Part 01: {part01(lines)}")
     print(f"Part 02: {part02(lines)}")
