@@ -6,15 +6,6 @@ MAX_VAL = {
     'blue': 14
 }
 
-
-def main():
-    with open("./input.txt") as f:
-        lines = f.read().splitlines()
-
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
-
-
 def part01(lines):
     value = 0
     for count, line in enumerate(lines, start=1):
@@ -58,4 +49,8 @@ def part02(lines):
 
 
 if __name__ == '__main__':
-    main()
+    with open("./input.txt") as f:
+        lines = f.read().splitlines()
+
+    print(f"Part 01: {part01(lines)}")
+    print(f"Part 02: {part02(lines)}")

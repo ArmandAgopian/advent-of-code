@@ -23,15 +23,6 @@ LETTER_DICT = {
     "9": 9,
 }
 
-
-def main():
-    with open("./input.txt") as f:
-        lines = f.read().splitlines()
-
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
-
-
 def part01(lines):
     value = 0
     for line in lines:
@@ -52,4 +43,8 @@ def part02(lines):
 
 
 if __name__ == '__main__':
-    main()
+    with open("./input.txt") as f:
+        lines = f.read().splitlines()
+
+    print(f"Part 01: {part01(lines)}")
+    print(f"Part 02: {part02(lines)}")
