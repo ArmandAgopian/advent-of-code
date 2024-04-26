@@ -23,6 +23,7 @@ LETTER_DICT = {
     "9": 9,
 }
 
+
 def part01(lines):
     value = 0
     for line in lines:

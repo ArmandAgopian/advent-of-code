@@ -1,5 +1,3 @@
-import regex as re
-
 MAX_VAL = {
     'red': 12,
     'green': 13,
