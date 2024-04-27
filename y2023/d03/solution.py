@@ -8,7 +8,7 @@ def part01(lines):
 
     for row, line in enumerate(lines):
         for col, char in enumerate(line):
-            if not re.search(r'\d|\.', char):
+            if not re.search(r"\d|\.", char):
                 valid_parts.add((row - 1, col + 1))
                 valid_parts.add((row - 1, col))
                 valid_parts.add((row - 1, col - 1))
@@ -22,7 +22,7 @@ def part01(lines):
     for row, line in enumerate(lines):
         nums = set()
         for col, char in enumerate(line):
-            if re.search(r'\d', char) and (row, col) in valid_parts:
+            if re.search(r"\d", char) and (row, col) in valid_parts:
                 if (row, col) in nums:
                     continue
                 num = char
@@ -30,7 +30,7 @@ def part01(lines):
 
                 try:
                     counter = 1
-                    while re.search(r'\d', line[col - counter]):
+                    while re.search(r"\d", line[col - counter]):
                         if col - counter < 0:
                             break
                         num = line[col - counter] + num
@@ -41,7 +41,7 @@ def part01(lines):
 
                 try:
                     counter = 1
-                    while re.search(r'\d', line[col + counter]):
+                    while re.search(r"\d", line[col + counter]):
                         num = num + line[col + counter]
                         nums.add((row, col + counter))
                         counter += 1
@@ -58,7 +58,7 @@ def part02(lines):
     return value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.read().splitlines()
 

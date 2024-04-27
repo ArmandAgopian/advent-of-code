@@ -15,7 +15,7 @@ def test_part02():
         "xtwone3four",
         "4nineeightseven2",
         "zoneight234",
-        "7pqrstsixteen"
+        "7pqrstsixteen",
     ]
 
     assert part02(example) == 281

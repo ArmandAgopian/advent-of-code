@@ -37,13 +37,17 @@ def part01(lines):
 def part02(lines):
     value = 0
     for line in lines:
-        matches = re.findall(r"\d|zero|one|two|three|four|five|six|seven|eight|nine", line, overlapped=True)
-        value += ((LETTER_DICT[matches[0]] * 10) + LETTER_DICT[matches[-1]])
+        matches = re.findall(
+            r"\d|zero|one|two|three|four|five|six|seven|eight|nine",
+            line,
+            overlapped=True,
+        )
+        value += (LETTER_DICT[matches[0]] * 10) + LETTER_DICT[matches[-1]]
 
     return value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.read().splitlines()
 
