@@ -15,9 +15,17 @@ def part01(lines):
 
 
 def part02(lines):
-    value = 0
+    cards = [1] * len(lines)
 
-    return value
+    for i, line in enumerate(lines):
+        winning_nums = set(line.split(":")[1].split("|")[0].split())
+        nums = set(line.split(":")[1].split("|")[1].split())
+        actual_wins = winning_nums & nums
+
+        for j in range(len(actual_wins)):
+            cards[i + j + 1] += cards[i]
+
+    return sum(cards)
 
 
 if __name__ == "__main__":
