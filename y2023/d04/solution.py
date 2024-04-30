@@ -30,7 +30,7 @@ def part02(lines):
 
 if __name__ == "__main__":
     with open("./input.txt") as f:
-        lines = f.read().splitlines()
+        lines = f.readlines()
 
     print(f"Part 01: {part01(lines)}")
     print(f"Part 02: {part02(lines)}")
