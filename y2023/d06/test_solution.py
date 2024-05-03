@@ -8,6 +8,6 @@ def test_part01():
 
 
 def test_part02():
-    example = []
+    example = ["Time:      7  15   30", "Distance:  9  40  200"]
 
-    # assert part02(example) ==
+    assert part02(example) == 71503
