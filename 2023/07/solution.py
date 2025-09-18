@@ -3,14 +3,14 @@ import regex as re
 CARD_ORDER = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
 
 
-def part01(lines):
+def part1(lines):
     value = 0
     ranks = {}
 
     return value
 
 
-def part02(lines):
+def part2(lines):
     value = 0
 
     return value
@@ -28,5 +28,5 @@ print(result)
     with open("./input.txt") as f:
         lines = f.readlines()
 
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
+    print(f"Part 1: {part1(lines)}")
+    print(f"Part 2: {part2(lines)}")

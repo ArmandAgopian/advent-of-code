@@ -1,7 +1,7 @@
 MAX_VAL = {"red": 12, "green": 13, "blue": 14}
 
 
-def part01(lines):
+def part1(lines):
     value = 0
     for count, line in enumerate(lines, start=1):
         limit = False
@@ -21,7 +21,7 @@ def part01(lines):
     return value
 
 
-def part02(lines):
+def part2(lines):
     value = 0
     for count, line in enumerate(lines, start=1):
         maxes = {"red": 0, "blue": 0, "green": 0}
@@ -43,5 +43,5 @@ if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.readlines()
 
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
+    print(f"Part 1: {part1(lines)}")
+    print(f"Part 2: {part2(lines)}")

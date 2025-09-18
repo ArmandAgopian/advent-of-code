@@ -1,7 +1,7 @@
 import regex as re
 
 
-def part01(lines):
+def part1(lines):
     value = float("inf")
     groups = lines.split("\n\n")
     for seed in groups[0].split(":")[1].split():
@@ -19,7 +19,7 @@ def part01(lines):
 
 
 # Solution provided by https://aoc-puzzle-solver.streamlit.app
-def part02(lines):
+def part2(lines):
     segments = lines.split("\n\n")
     intervals = []
 
@@ -62,5 +62,5 @@ if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.read()
 
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
+    print(f"Part 1: {part1(lines)}")
+    print(f"Part 2: {part2(lines)}")

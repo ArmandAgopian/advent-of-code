@@ -1,7 +1,7 @@
 import regex as re
 
 
-def part01(lines):
+def part1(lines):
     value = 0
 
     for line in lines:
@@ -14,7 +14,7 @@ def part01(lines):
     return value
 
 
-def part02(lines):
+def part2(lines):
     cards = [1] * len(lines)
 
     for i, line in enumerate(lines):
@@ -32,5 +32,5 @@ if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.readlines()
 
-    print(f"Part 01: {part01(lines)}")
-    print(f"Part 02: {part02(lines)}")
+    print(f"Part 1: {part1(lines)}")
+    print(f"Part 2: {part2(lines)}")
