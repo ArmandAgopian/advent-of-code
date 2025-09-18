@@ -1,4 +1,5 @@
 import regex as re
+from collections import Counter
 
 CARD_ORDER = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
 
@@ -6,6 +7,9 @@ CARD_ORDER = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
 def part1(lines):
     value = 0
     ranks = {}
+
+    #def char_count(s: str) -> dict:
+    #    return dict(Counter(s))
 
     return value
 
@@ -15,16 +19,7 @@ def part2(lines):
 
     return value
 
-
-from collections import Counter
-
-def char_count(s: str) -> dict:
-    return dict(Counter(s))
-
-# Example usage
-s = "aabbc"
-result = char_count(s)
-print(result)
+if __name__ == "__main__":
     with open("./input.txt") as f:
         lines = f.readlines()
 
