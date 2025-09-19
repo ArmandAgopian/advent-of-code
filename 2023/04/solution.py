@@ -1,3 +1,4 @@
+from pathlib import Path
 import regex as re
 
 
@@ -29,7 +30,7 @@ def part2(lines):
 
 
 if __name__ == "__main__":
-    with open("./input.txt") as f:
+    with open(Path(__file__).parent / "input.txt") as f:
         lines = f.readlines()
 
     print(f"Part 1: {part1(lines)}")
