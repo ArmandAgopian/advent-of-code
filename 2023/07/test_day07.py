@@ -1,6 +1,5 @@
 import pytest
-from solution import part1, part2
-
+from day07 import part1, part2
 INPUT_PART1 = """\
 32T3K 765
 T55J5 684
@@ -12,10 +11,14 @@ QQQJA 483
 EXPECTED_PART1 = 6440
 
 INPUT_PART2="""\
-
+32T3K 765
+T55J5 684
+KK677 28
+KTJJT 220
+QQQJA 483
 """
 
-EXPECTED_PART2 = None
+EXPECTED_PART2 = 5905
 
 def test_part1():
     lines = INPUT_PART1.splitlines()
