@@ -1,5 +1,5 @@
 import pytest
-from solution import part1, part2
+from day06 import part1, part2
 
 INPUT_PART1 = """\
 Time:      7  15   30
