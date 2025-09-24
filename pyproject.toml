@@ -5,6 +5,9 @@ description = "Collection of all Advent of Code solutions"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "advent-of-code-data>=2.1.0",
+    "dotenv>=0.9.9",
     "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
     "regex>=2025.9.18",
 ]
