@@ -1,3 +1,4 @@
+import argparse
 import os
 
 from aocd import get_data
@@ -16,12 +17,16 @@ def load_input(year: int, day: int):
     outfile.write_text(data)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python input_loader.py <YYYY> <DD>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Load input for Advent of Code by year and day."
+    )
+    parser.add_argument("YYYY", type=int, help="Year of the challenge (YYYY)")
+    parser.add_argument("DD", type=int, help="Day of the challenge (DD)")
 
-    year = int(sys.argv[1])
-    day = int(sys.argv[2])
+    args = parser.parse_args()
+
+    year = args.year
+    day = args.day
 
     load_dotenv()
     load_input(year, day)
