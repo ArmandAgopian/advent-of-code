@@ -1,5 +1,5 @@
 import pytest
-from day02 import part1, part2
+from y23d02 import part1, part2
 
 INPUT_PART1 = """\
 Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green

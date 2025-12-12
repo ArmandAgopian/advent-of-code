@@ -1,5 +1,5 @@
 import pytest
-from day08 import part1, part2
+from y23d08 import part1, part2
 
 INPUT_PART1 = """\
 LLR

@@ -1,5 +1,5 @@
 import pytest
-from day07 import part1, part2
+from y23d07 import part1, part2
 
 INPUT_PART1 = """\
 32T3K 765

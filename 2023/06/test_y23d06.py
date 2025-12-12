@@ -1,21 +1,19 @@
 import pytest
-from day09 import part1, part2
+from y23d06 import part1, part2
 
 INPUT_PART1 = """\
-0 3 6 9 12 15
-1 3 6 10 15 21
-10 13 16 21 30 45
+Time:      7  15   30
+Distance:  9  40  200
 """
 
-EXPECTED_PART1 = 114
+EXPECTED_PART1 = 288
 
 INPUT_PART2="""\
-0 3 6 9 12 15
-1 3 6 10 15 21
-10 13 16 21 30 45
+Time:      71530
+Distance:  940200
 """
 
-EXPECTED_PART2 = 2
+EXPECTED_PART2 = 71503
 
 def test_part1():
     lines = INPUT_PART1.splitlines()

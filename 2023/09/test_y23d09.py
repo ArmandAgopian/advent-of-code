@@ -1,26 +1,21 @@
 import pytest
-from day01 import part1, part2
+from y23d09 import part1, part2
 
 INPUT_PART1 = """\
-L68
-L30
-R48
-L5
-R60
-L55
-L1
-L99
-R14
-L82
+0 3 6 9 12 15
+1 3 6 10 15 21
+10 13 16 21 30 45
 """
 
-EXPECTED_PART1 = 3
+EXPECTED_PART1 = 114
 
 INPUT_PART2="""\
-
+0 3 6 9 12 15
+1 3 6 10 15 21
+10 13 16 21 30 45
 """
 
-EXPECTED_PART2 = 281
+EXPECTED_PART2 = 2
 
 def test_part1():
     lines = INPUT_PART1.splitlines()

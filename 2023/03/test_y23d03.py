@@ -1,5 +1,5 @@
 import pytest
-from day03 import part1, part2
+from y23d03 import part1, part2
 
 INPUT_PART1 = """\
 467..114..

@@ -1,23 +1,23 @@
 import pytest
-from day01 import part1, part2
+from y25d01 import part1, part2
 
 INPUT_PART1 = """\
-1abc2
-pqr3stu8vwx
-a1b2c3d4e5f
-treb7uchet
+L68
+L30
+R48
+L5
+R60
+L55
+L1
+L99
+R14
+L82
 """
 
-EXPECTED_PART1 = 142
+EXPECTED_PART1 = 3
 
 INPUT_PART2="""\
-two1nine
-eightwothree
-abcone2threexyz
-xtwone3four
-4nineeightseven2
-zoneight234
-7pqrstsixteen
+
 """
 
 EXPECTED_PART2 = 281
