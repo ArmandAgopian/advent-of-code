@@ -2,10 +2,19 @@ import pytest
 from day01 import part1, part2
 
 INPUT_PART1 = """\
-
+L68
+L30
+R48
+L5
+R60
+L55
+L1
+L99
+R14
+L82
 """
 
-EXPECTED_PART1 = 142
+EXPECTED_PART1 = 3
 
 INPUT_PART2="""\
 

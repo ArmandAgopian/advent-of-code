@@ -2,11 +2,18 @@ from pathlib import Path
 import regex as re
 
 def part1(input):
-    return input
+    value = 50
+    for line in input.splitlines():
+        if line[0] == 'L':
+            value = (value - int(line[1:])) % 100
+        elif line[0] == 'R':
+            value = (value + int(line[1:])) % 100
+        
+    return value
 
 
 def part2(input):
-    return input
+    return NotImplementedError
 
 
 if __name__ == "__main__":
