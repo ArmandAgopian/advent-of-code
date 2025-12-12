@@ -5,6 +5,7 @@ Collection of all Advent of Code solutions
 |------|---------|
 | 2023 | Python  |
 | 2024 | TEMP    |
+| 2025 | Python  |
 
 ## Input Loader
 1. Run `uv sync`
