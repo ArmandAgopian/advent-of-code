@@ -1,8 +1,8 @@
 from pathlib import Path
 
 
-def part1(input: str) -> int:
-    grid = [list(line) for line in input.splitlines()]
+def part1(puzzle: str) -> int:
+    grid = [list(line) for line in puzzle.splitlines()]
     value = 0
 
     directions = [(-1, -1), (-1, 0), (-1, 1),
@@ -24,8 +24,8 @@ def part1(input: str) -> int:
                     value += 1
     return value
 
-def part2(input: str) -> int:
-    grid = [list(line) for line in input.splitlines()]
+def part2(puzzle: str) -> int:
+    grid = [list(line) for line in puzzle.splitlines()]
     value = 0
     iteration = 1
 
@@ -61,5 +61,5 @@ def part2(input: str) -> int:
 if __name__ == "__main__":
     input = (Path(__file__).parent / "input.txt").read_text()
 
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f"Part 1: {part1(puzzle)}")
+    print(f"Part 2: {part2(puzzle)}")

@@ -1,10 +1,10 @@
 from pathlib import Path
 
 
-def part1(input: str) -> int:
+def part1(puzzle: str) -> int:
     value = 0
 
-    ranges, foods = input.split('\n\n')
+    ranges, foods = puzzle.split('\n\n')
     ranges = [tuple(map(int, line.split('-'))) for line in ranges.splitlines()]
     foods = [int(line) for line in foods.splitlines()]
 
@@ -16,9 +16,9 @@ def part1(input: str) -> int:
     
     return value
 
-def part2(input: str) -> int:
+def part2(puzzle: str) -> int:
     
-    ranges, _ = input.split('\n\n')
+    ranges, _ = puzzle.split('\n\n')
     ranges = [tuple(map(int, line.split('-'))) for line in ranges.splitlines()]
     ranges.sort()
 
@@ -41,5 +41,5 @@ def part2(input: str) -> int:
 if __name__ == "__main__":
     input = (Path(__file__).parent / "input.txt").read_text()
 
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f"Part 1: {part1(puzzle)}")
+    print(f"Part 2: {part2(puzzle)}")

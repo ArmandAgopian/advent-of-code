@@ -1,11 +1,11 @@
 from pathlib import Path
 
 
-def part1(input):
+def part1(puzzle):
     value = 50
     zero_counter = 0
 
-    for line in input.splitlines():
+    for line in puzzle.splitlines():
         distance = int(line[1:])
         
         if line[0] == 'L':
@@ -19,7 +19,7 @@ def part1(input):
     return zero_counter
 
 
-def part2(input):
+def part2(puzzle):
     value = 50
     zero_counter = 0
 
@@ -29,7 +29,7 @@ def part2(input):
     # - number crosses positive to negative
     # - number crosses negative to positive
 
-    for line in input.splitlines():
+    for line in puzzle.splitlines():
         distance = int(line[1:])
 
         for _ in range(distance):
@@ -46,7 +46,7 @@ def part2(input):
 
 if __name__ == "__main__":
     with open(Path(__file__).parent / "input.txt") as f:
-        input = f.read()
+        puzzle = f.read()
 
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f"Part 1: {part1(puzzle)}")
+    print(f"Part 2: {part2(puzzle)}")

@@ -1,10 +1,10 @@
 from pathlib import Path
 
 
-def part1(input: str) -> int:
+def part1(puzzle: str) -> int:
     value = 0
 
-    for line in input.splitlines():
+    for line in puzzle.splitlines():
         bank = [int(i) for i in line]
         highest = max(bank[:-1])
         i = bank.index(highest)
@@ -13,14 +13,14 @@ def part1(input: str) -> int:
 
     return value
 
-def part2(input: str) -> int:
+def part2(puzzle: str) -> int:
     # i is 0
     # list of values
     #for reverse range of 12->1?
     # find max, repeat, update i. subset of [i+1:range limit]
     value = 0
 
-    for line in input.splitlines():
+    for line in puzzle.splitlines():
         bank = [int(i) for i in line]
         digits = []
         i = -1
@@ -39,5 +39,5 @@ def part2(input: str) -> int:
 if __name__ == "__main__":
     input = (Path(__file__).parent / "input.txt").read_text()
 
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f"Part 1: {part1(puzzle)}")
+    print(f"Part 2: {part2(puzzle)}")

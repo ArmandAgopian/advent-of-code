@@ -3,9 +3,9 @@ from pathlib import Path
 import regex as re
 
 
-def part1(input: str) -> int:
+def part1(puzzle: str) -> int:
     value = 0
-    for pair in input.split(","):
+    for pair in puzzle.split(","):
         start, end = map(int, pair.split("-"))
 
         for num in range(start, end + 1):
@@ -14,9 +14,9 @@ def part1(input: str) -> int:
 
     return value
 
-def part2(input: str) -> int:
+def part2(puzzle: str) -> int:
     value = 0
-    for pair in input.split(","):
+    for pair in puzzle.split(","):
         start, end = map(int, pair.split("-"))
 
         for num in range(start, end + 1):
@@ -26,7 +26,7 @@ def part2(input: str) -> int:
     return value
 
 if __name__ == "__main__":
-    input = (Path(__file__).parent / "input.txt").read_text()
+    puzzle = (Path(__file__).parent / "input.txt").read_text()
 
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f"Part 1: {part1(puzzle)}")
+    print(f"Part 2: {part2(puzzle)}")
