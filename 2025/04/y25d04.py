@@ -1,6 +1,4 @@
-import heapq
 from pathlib import Path
-import regex as re
 
 
 def part1(input: str) -> int:

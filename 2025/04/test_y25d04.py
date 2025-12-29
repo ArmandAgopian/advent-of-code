@@ -1,4 +1,3 @@
-import pytest
 from y25d04 import part1, part2
 
 INPUT_PART1 = """\
