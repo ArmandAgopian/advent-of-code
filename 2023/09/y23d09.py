@@ -1,6 +1,3 @@
-import itertools
-from math import lcm
-import regex as re
 from pathlib import Path
 
 def find_history_1(line):

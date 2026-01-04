@@ -1,9 +1,7 @@
 import argparse
-import os
 
 from aocd import get_data
 from dotenv import load_dotenv
-import sys
 from pathlib import Path
 
 def load_input(year: int, day: int):

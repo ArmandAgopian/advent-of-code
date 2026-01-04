@@ -1,6 +1,4 @@
-from dataclasses import asdict
 from pathlib import Path
-import regex as re
 from collections import Counter
 
 CARD_ORDER = {"2": 2,
