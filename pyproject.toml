@@ -11,3 +11,8 @@ dependencies = [
     "pytest-cov>=7.0.0",
     "regex>=2025.9.18",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+]
