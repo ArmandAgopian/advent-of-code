@@ -25,7 +25,7 @@ INPUT_PART1 = """\
 
 EXPECTED_PART1 = 40
 
-INPUT_PART2= """\
+INPUT_PART2 = """\
 162,817,812
 57,618,57
 906,360,560
@@ -50,8 +50,10 @@ INPUT_PART2= """\
 
 EXPECTED_PART2 = None
 
+
 def test_part1():
-  assert part1(INPUT_PART1) == EXPECTED_PART1
+    assert part1(INPUT_PART1) == EXPECTED_PART1
+
 
 def test_part2():
-  assert part2(INPUT_PART2) == EXPECTED_PART2
+    assert part2(INPUT_PART2) == EXPECTED_PART2

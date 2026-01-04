@@ -8,9 +8,9 @@ def part1(puzzle):
     for line in puzzle.splitlines():
         distance = int(line[1:])
 
-        if line[0] == "L":
+        if line[0] == 'L':
             value = (value - distance) % 100
-        elif line[0] == "R":
+        elif line[0] == 'R':
             value = (value + distance) % 100
 
         if value == 0:
@@ -33,9 +33,9 @@ def part2(puzzle):
         distance = int(line[1:])
 
         for _ in range(distance):
-            if line[0] == "L":
+            if line[0] == 'L':
                 value = (value - 1) % 100
-            elif line[0] == "R":
+            elif line[0] == 'R':
                 value = (value + 1) % 100
 
             if value == 0:
@@ -44,9 +44,9 @@ def part2(puzzle):
     return zero_counter
 
 
-if __name__ == "__main__":
-    with open(Path(__file__).parent / "input.txt") as f:
+if __name__ == '__main__':
+    with open(Path(__file__).parent / 'input.txt') as f:
         puzzle = f.read()
 
-    print(f"Part 1: {part1(puzzle)}")
-    print(f"Part 2: {part2(puzzle)}")
+    print(f'Part 1: {part1(puzzle)}')
+    print(f'Part 2: {part2(puzzle)}')

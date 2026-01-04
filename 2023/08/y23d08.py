@@ -12,11 +12,11 @@ def part1(lines):
         val2 = line[12:15]
         tree[key] = (val1, val2)
 
-    curr = "AAA"
+    curr = 'AAA'
     for i, n in zip(itertools.count(), itertools.cycle(lines[0])):
-        if curr == "ZZZ":
+        if curr == 'ZZZ':
             return i
-        curr = tree[curr][0 if n == "L" else 1]
+        curr = tree[curr][0 if n == 'L' else 1]
 
 
 def part2(lines):
@@ -27,23 +27,23 @@ def part2(lines):
         val2 = line[12:15]
         tree[key] = (val1, val2)
 
-    pattern = re.compile(r"..A")  # 3 chars, last must be A
+    pattern = re.compile(r'..A')  # 3 chars, last must be A
     curr = [k for k in tree.keys() if pattern.match(k)]
     completed = []
 
     for node in curr:
         for i, n in zip(itertools.count(), itertools.cycle(lines[0])):
-            if node[2] == "Z":
+            if node[2] == 'Z':
                 completed.append(i)
                 break
-            node = tree[node][0 if n == "L" else 1]
+            node = tree[node][0 if n == 'L' else 1]
 
     return lcm(*completed)
 
 
-if __name__ == "__main__":
-    with open(Path(__file__).parent / "input.txt") as f:
+if __name__ == '__main__':
+    with open(Path(__file__).parent / 'input.txt') as f:
         lines = f.read().splitlines()
 
-    print(f"Part 1: {part1(lines)}")
-    print(f"Part 2: {part2(lines)}")
+    print(f'Part 1: {part1(lines)}')
+    print(f'Part 2: {part2(lines)}')

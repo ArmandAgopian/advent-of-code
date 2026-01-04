@@ -12,9 +12,9 @@ def part1(puzzle: str) -> int:
         values = [int(problems[r][i]) for r in range(len(problems) - 1)]
 
         match problems[-1][i]:
-            case "+":
+            case '+':
                 value = sum(values)
-            case "*":
+            case '*':
                 value = reduce(operator.mul, values, 1)
 
         count += value
@@ -33,29 +33,29 @@ def part2(puzzle: str) -> int:
 
     while col >= 0:
         # Skip separator columns
-        if all(rows[r][col] == " " for r in range(len(rows))):
+        if all(rows[r][col] == ' ' for r in range(len(rows))):
             col -= 1
             continue
 
         # Collect columns belonging to this problem
         problem_cols = []
-        while col >= 0 and not all(rows[r][col] == " " for r in range(len(rows))):
+        while col >= 0 and not all(rows[r][col] == ' ' for r in range(len(rows))):
             problem_cols.append(col)
             col -= 1
 
         # Operator is at the bottom of the rightmost column
-        op = next(rows[-1][c] for c in problem_cols if rows[-1][c] in "+*")
+        op = next(rows[-1][c] for c in problem_cols if rows[-1][c] in '+*')
 
         values = []
         for c in problem_cols:
             digits = [rows[r][c] for r in range(len(rows) - 1) if rows[r][c].isdigit()]
             if digits:
-                values.append(int("".join(digits)))
+                values.append(int(''.join(digits)))
 
         match op:
-            case "+":
+            case '+':
                 value = sum(values)
-            case "*":
+            case '*':
                 value = reduce(operator.mul, values, 1)
 
         count += value
@@ -63,8 +63,8 @@ def part2(puzzle: str) -> int:
     return count
 
 
-if __name__ == "__main__":
-    puzzle = (Path(__file__).parent / "input.txt").read_text()
+if __name__ == '__main__':
+    puzzle = (Path(__file__).parent / 'input.txt').read_text()
 
-    print(f"Part 1: {part1(puzzle)}")
-    print(f"Part 2: {part2(puzzle)}")
+    print(f'Part 1: {part1(puzzle)}')
+    print(f'Part 2: {part2(puzzle)}')

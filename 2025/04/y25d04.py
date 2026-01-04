@@ -9,7 +9,7 @@ def part1(puzzle: str) -> int:
 
     for row in range(len(grid)):
         for col in range(len(grid[0])):
-            if grid[row][col] == "@":
+            if grid[row][col] == '@':
                 neighbors = 0
 
                 for drow, dcol in directions:
@@ -18,7 +18,7 @@ def part1(puzzle: str) -> int:
                     if (
                         (0 <= row_new < len(grid))
                         and (0 <= col_new < len(grid[0]))
-                        and (grid[row_new][col_new] == "@")
+                        and (grid[row_new][col_new] == '@')
                     ):
                         neighbors += 1
 
@@ -39,7 +39,7 @@ def part2(puzzle: str) -> int:
 
         for row in range(len(grid)):
             for col in range(len(grid[0])):
-                if grid[row][col] == "@":
+                if grid[row][col] == '@':
                     neighbors = 0
 
                     for drow, dcol in directions:
@@ -49,26 +49,26 @@ def part2(puzzle: str) -> int:
                             (0 <= row_new < len(grid))
                             and (0 <= col_new < len(grid[0]))
                             and (
-                                grid[row_new][col_new] == "@"
-                                or grid[row_new][col_new] == "x"
+                                grid[row_new][col_new] == '@'
+                                or grid[row_new][col_new] == 'x'
                             )
                         ):
                             neighbors += 1
 
                     if neighbors < 4:
                         value += 1
-                        grid[row][col] = "x"
+                        grid[row][col] = 'x'
                         iteration += 1
 
         for row in range(len(grid)):
             for col in range(len(grid[0])):
-                if grid[row][col] == "x":
-                    grid[row][col] = "."
+                if grid[row][col] == 'x':
+                    grid[row][col] = '.'
     return value
 
 
-if __name__ == "__main__":
-    puzzle = (Path(__file__).parent / "input.txt").read_text()
+if __name__ == '__main__':
+    puzzle = (Path(__file__).parent / 'input.txt').read_text()
 
-    print(f"Part 1: {part1(puzzle)}")
-    print(f"Part 2: {part2(puzzle)}")
+    print(f'Part 1: {part1(puzzle)}')
+    print(f'Part 2: {part2(puzzle)}')

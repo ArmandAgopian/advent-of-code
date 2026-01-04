@@ -4,8 +4,8 @@ from pathlib import Path
 def part1(puzzle: str) -> int:
     value = 0
 
-    ranges, foods = puzzle.split("\n\n")
-    ranges = [tuple(map(int, line.split("-"))) for line in ranges.splitlines()]
+    ranges, foods = puzzle.split('\n\n')
+    ranges = [tuple(map(int, line.split('-'))) for line in ranges.splitlines()]
     foods = [int(line) for line in foods.splitlines()]
 
     for food in foods:
@@ -18,8 +18,8 @@ def part1(puzzle: str) -> int:
 
 
 def part2(puzzle: str) -> int:
-    ranges, _ = puzzle.split("\n\n")
-    ranges = [tuple(map(int, line.split("-"))) for line in ranges.splitlines()]
+    ranges, _ = puzzle.split('\n\n')
+    ranges = [tuple(map(int, line.split('-'))) for line in ranges.splitlines()]
     ranges.sort()
 
     # https://www.youtube.com/watch?v=IKzTKqVIEig
@@ -39,8 +39,8 @@ def part2(puzzle: str) -> int:
     return count
 
 
-if __name__ == "__main__":
-    puzzle = (Path(__file__).parent / "input.txt").read_text()
+if __name__ == '__main__':
+    puzzle = (Path(__file__).parent / 'input.txt').read_text()
 
-    print(f"Part 1: {part1(puzzle)}")
-    print(f"Part 2: {part2(puzzle)}")
+    print(f'Part 1: {part1(puzzle)}')
+    print(f'Part 2: {part2(puzzle)}')

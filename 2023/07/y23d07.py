@@ -2,35 +2,35 @@ from pathlib import Path
 from collections import Counter
 
 CARD_ORDER = {
-    "2": 2,
-    "3": 3,
-    "4": 4,
-    "5": 5,
-    "6": 6,
-    "7": 7,
-    "8": 8,
-    "9": 9,
-    "T": 10,
-    "J": 11,
-    "Q": 12,
-    "K": 13,
-    "A": 14,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    'T': 10,
+    'J': 11,
+    'Q': 12,
+    'K': 13,
+    'A': 14,
 }
 
 CARD_ORDER2 = {
-    "J": 1,
-    "2": 2,
-    "3": 3,
-    "4": 4,
-    "5": 5,
-    "6": 6,
-    "7": 7,
-    "8": 8,
-    "9": 9,
-    "T": 10,
-    "Q": 12,
-    "K": 13,
-    "A": 14,
+    'J': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    'T': 10,
+    'Q': 12,
+    'K': 13,
+    'A': 14,
 }
 
 
@@ -92,8 +92,8 @@ def part2(lines):
         left, right = line.split()
         counts = dict(Counter(left))
 
-        jokers = counts.get("J", 0)
-        non_jokers = [v for k, v in counts.items() if k != "J"]
+        jokers = counts.get('J', 0)
+        non_jokers = [v for k, v in counts.items() if k != 'J']
 
         if not non_jokers:
             non_jokers = [0]
@@ -129,9 +129,9 @@ def part2(lines):
     return value
 
 
-if __name__ == "__main__":
-    with open(Path(__file__).parent / "input.txt") as f:
+if __name__ == '__main__':
+    with open(Path(__file__).parent / 'input.txt') as f:
         lines = f.readlines()
 
-    print(f"Part 1: {part1(lines)}")
-    print(f"Part 2: {part2(lines)}")
+    print(f'Part 1: {part1(lines)}')
+    print(f'Part 2: {part2(lines)}')

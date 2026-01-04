@@ -33,13 +33,13 @@ def part2(puzzle: str) -> int:
             highest = max(bank[i + 1 : num])
             digits.append(highest)
             i = bank.index(highest, i + 1, num)
-        value += int("".join(map(str, digits)))
+        value += int(''.join(map(str, digits)))
 
     return value
 
 
-if __name__ == "__main__":
-    puzzle = (Path(__file__).parent / "input.txt").read_text()
+if __name__ == '__main__':
+    puzzle = (Path(__file__).parent / 'input.txt').read_text()
 
-    print(f"Part 1: {part1(puzzle)}")
-    print(f"Part 2: {part2(puzzle)}")
+    print(f'Part 1: {part1(puzzle)}')
+    print(f'Part 2: {part2(puzzle)}')

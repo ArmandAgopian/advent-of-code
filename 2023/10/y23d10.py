@@ -8,7 +8,7 @@ def part1(input):
 
     for i, row in enumerate(grid):
         for j, value in enumerate(row):
-            if value == "S":
+            if value == 'S':
                 start = (i, j)
 
     curr1 = start
@@ -24,8 +24,8 @@ def part2(input):
     return NotImplementedError
 
 
-if __name__ == "__main__":
-    with open(Path(__file__).parent / "input.txt") as f:
+if __name__ == '__main__':
+    with open(Path(__file__).parent / 'input.txt') as f:
         input = f.read()
-    print(f"Part 1: {part1(input)}")
-    print(f"Part 2: {part2(input)}")
+    print(f'Part 1: {part1(input)}')
+    print(f'Part 2: {part2(input)}')
