@@ -38,7 +38,7 @@ humidity-to-location map:
 
 EXPECTED_PART1 = 35
 
-INPUT_PART2="""\
+INPUT_PART2 = """\
 seeds: 79 14 55 13
 
 seed-to-soil map:
@@ -76,12 +76,14 @@ humidity-to-location map:
 
 EXPECTED_PART2 = 46
 
+
 def test_part1():
     # Needed for custom processing
     # lines = INPUT_PART1.splitlines()
     assert part1(INPUT_PART1) == EXPECTED_PART1
 
+
 def test_part2():
-    #Needed for custom processing
+    # Needed for custom processing
     # lines = INPUT_PART2.splitlines()
     assert part2(INPUT_PART2) == EXPECTED_PART2

@@ -10,7 +10,7 @@ ZZZ = (ZZZ, ZZZ)
 
 EXPECTED_PART1 = 6
 
-INPUT_PART2="""\
+INPUT_PART2 = """\
 LR
 
 11A = (11B, XXX)
@@ -25,9 +25,11 @@ XXX = (XXX, XXX)
 
 EXPECTED_PART2 = 6
 
+
 def test_part1():
     lines = INPUT_PART1.splitlines()
     assert part1(lines) == EXPECTED_PART1
+
 
 def test_part2():
     lines = INPUT_PART2.splitlines()

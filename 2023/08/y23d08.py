@@ -12,11 +12,12 @@ def part1(lines):
         val2 = line[12:15]
         tree[key] = (val1, val2)
 
-    curr = 'AAA'
+    curr = "AAA"
     for i, n in zip(itertools.count(), itertools.cycle(lines[0])):
-        if curr == 'ZZZ':
+        if curr == "ZZZ":
             return i
-        curr = tree[curr][0 if n == 'L' else 1]
+        curr = tree[curr][0 if n == "L" else 1]
+
 
 def part2(lines):
     tree = {}
@@ -32,12 +33,13 @@ def part2(lines):
 
     for node in curr:
         for i, n in zip(itertools.count(), itertools.cycle(lines[0])):
-            if node[2] == 'Z':
+            if node[2] == "Z":
                 completed.append(i)
                 break
-            node = tree[node][0 if n == 'L' else 1]
+            node = tree[node][0 if n == "L" else 1]
 
     return lcm(*completed)
+
 
 if __name__ == "__main__":
     with open(Path(__file__).parent / "input.txt") as f:

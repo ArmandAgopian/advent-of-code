@@ -15,7 +15,7 @@ L82
 
 EXPECTED_PART1 = 3
 
-INPUT_PART2="""\
+INPUT_PART2 = """\
 L68
 L30
 R48
@@ -44,14 +44,18 @@ R50
 
 EXPECTED_PART2_EDGE_HALF_HALF = 1
 
+
 def test_part1():
     assert part1(INPUT_PART1) == EXPECTED_PART1
+
 
 def test_part2():
     assert part2(INPUT_PART2) == EXPECTED_PART2
 
+
 def test_part2_edge_half_full():
     assert part2(INPUT_PART2_EDGE_HALF_FULL) == EXPECTED_PART2_EDGE_HALF_FULL
-    
+
+
 def test_part2_edge_half_half():
     assert part2(INPUT_PART2_EDGE_HALF_HALF) == EXPECTED_PART2_EDGE_HALF_HALF

@@ -7,12 +7,12 @@ def part1(puzzle):
 
     for line in puzzle.splitlines():
         distance = int(line[1:])
-        
-        if line[0] == 'L':
+
+        if line[0] == "L":
             value = (value - distance) % 100
-        elif line[0] == 'R':
+        elif line[0] == "R":
             value = (value + distance) % 100
-        
+
         if value == 0:
             zero_counter += 1
 
@@ -33,9 +33,9 @@ def part2(puzzle):
         distance = int(line[1:])
 
         for _ in range(distance):
-            if line[0] == 'L':
+            if line[0] == "L":
                 value = (value - 1) % 100
-            elif line[0] == 'R':
+            elif line[0] == "R":
                 value = (value + 1) % 100
 
             if value == 0:

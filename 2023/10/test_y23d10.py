@@ -10,15 +10,17 @@ LJ.LJ
 
 EXPECTED_PART1 = 8
 
-INPUT_PART2="""\
+INPUT_PART2 = """\
 
 """
 
 EXPECTED_PART2 = 2
 
+
 def test_part1():
     lines = INPUT_PART1.splitlines()
     assert part1(lines) == EXPECTED_PART1
+
 
 def test_part2():
     lines = INPUT_PART2.splitlines()

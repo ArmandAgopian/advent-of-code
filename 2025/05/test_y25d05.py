@@ -16,7 +16,7 @@ INPUT_PART1 = """\
 
 EXPECTED_PART1 = 3
 
-INPUT_PART2= """\
+INPUT_PART2 = """\
 3-5
 10-14
 16-20
@@ -32,8 +32,10 @@ INPUT_PART2= """\
 
 EXPECTED_PART2 = 14
 
+
 def test_part1():
     assert part1(INPUT_PART1) == EXPECTED_PART1
+
 
 def test_part2():
     assert part2(INPUT_PART2) == EXPECTED_PART2

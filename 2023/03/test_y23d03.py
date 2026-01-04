@@ -15,7 +15,7 @@ INPUT_PART1 = """\
 
 EXPECTED_PART1 = 4361
 
-INPUT_PART2="""\
+INPUT_PART2 = """\
 467..114..
 ...*......
 ..35..633.
@@ -30,9 +30,11 @@ INPUT_PART2="""\
 
 EXPECTED_PART2 = 467835
 
+
 def test_part1():
     lines = INPUT_PART1.splitlines()
     assert part1(lines) == EXPECTED_PART1
+
 
 def test_part2():
     lines = INPUT_PART2.splitlines()

@@ -1,33 +1,37 @@
 from pathlib import Path
 from collections import Counter
 
-CARD_ORDER = {"2": 2,
-              "3": 3,
-              "4": 4,
-              "5": 5,
-              "6": 6,
-              "7": 7,
-              "8": 8,
-              "9": 9,
-              "T": 10,
-              "J": 11,
-              "Q": 12,
-              "K": 13,
-              "A": 14}
+CARD_ORDER = {
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "T": 10,
+    "J": 11,
+    "Q": 12,
+    "K": 13,
+    "A": 14,
+}
 
-CARD_ORDER2 = {"J": 1,
-               "2": 2,
-               "3": 3,
-               "4": 4,
-               "5": 5,
-               "6": 6,
-               "7": 7,
-               "8": 8,
-               "9": 9,
-               "T": 10,
-               "Q": 12,
-               "K": 13,
-               "A": 14}
+CARD_ORDER2 = {
+    "J": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "T": 10,
+    "Q": 12,
+    "K": 13,
+    "A": 14,
+}
 
 
 def part1(lines):
@@ -73,8 +77,7 @@ def part1(lines):
         hands.append((hand, left, right))
 
     sorted_hands = sorted(
-        hands,
-        key=lambda item: (item[0], [CARD_ORDER[c] for c in item[1]])
+        hands, key=lambda item: (item[0], [CARD_ORDER[c] for c in item[1]])
     )
 
     value = sum((i + 1) * int(hand[2]) for i, hand in enumerate(sorted_hands))
@@ -110,7 +113,7 @@ def part2(lines):
                     hand = 3  # three pair
             case 2:
                 if non_jokers[1] == 2:
-                    hand = 2 # two pair
+                    hand = 2  # two pair
                 else:
                     hand = 1  # one pair
             case 1:
@@ -119,8 +122,7 @@ def part2(lines):
         hands.append((hand, left, right))
 
     sorted_hands = sorted(
-        hands,
-        key=lambda item: (item[0], [CARD_ORDER2[c] for c in item[1]])
+        hands, key=lambda item: (item[0], [CARD_ORDER2[c] for c in item[1]])
     )
 
     value = sum((i + 1) * int(hand[2]) for i, hand in enumerate(sorted_hands))

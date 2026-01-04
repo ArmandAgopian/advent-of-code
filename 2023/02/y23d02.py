@@ -11,7 +11,6 @@ def part1(lines):
 
         # Each game set
         for set in line.split(":")[1].split(";"):
-
             # Each color number pair
             for pair in set.split(","):
                 number, color = pair.split()
@@ -31,7 +30,6 @@ def part2(lines):
 
         # Each game set
         for set in line.split(":")[1].split(";"):
-
             # Each color number pair
             for pair in set.split(","):
                 number, color = pair.split()

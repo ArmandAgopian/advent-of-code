@@ -4,6 +4,7 @@ from aocd import get_data
 from dotenv import load_dotenv
 from pathlib import Path
 
+
 def load_input(year: int, day: int):
     data = get_data(year=year, day=day)
 
@@ -13,6 +14,7 @@ def load_input(year: int, day: int):
 
     outfile = outdir / "input.txt"
     outfile.write_text(data)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

@@ -32,7 +32,7 @@ INPUT_PART1_SMALL = """\
 
 EXPECTED_PART1_SMALL = 2
 
-INPUT_PART2= """\
+INPUT_PART2 = """\
 .......S.......
 ...............
 .......^.......
@@ -64,14 +64,18 @@ INPUT_PART2_SMALL = """\
 
 EXPECTED_PART2_SMALL = 3
 
+
 def test_part1():
-  assert part1(INPUT_PART1) == EXPECTED_PART1
+    assert part1(INPUT_PART1) == EXPECTED_PART1
+
 
 def test_part1_small():
-  assert part1(INPUT_PART1_SMALL) == EXPECTED_PART1_SMALL
+    assert part1(INPUT_PART1_SMALL) == EXPECTED_PART1_SMALL
+
 
 def test_part2():
-  assert part2(INPUT_PART2) == EXPECTED_PART2
+    assert part2(INPUT_PART2) == EXPECTED_PART2
+
 
 def test_part2_small():
-  assert part2(INPUT_PART2_SMALL) == EXPECTED_PART2_SMALL
+    assert part2(INPUT_PART2_SMALL) == EXPECTED_PART2_SMALL
